@@ -41,7 +41,7 @@ def calculate_similarity(book1, book2):
         return 0.0
 
 try:
-    df = pd.read_csv('../books.csv')
+    df = pd.read_csv('books.csv')
     books = [Book(id=str(row['id']), subjects=row['subjects'], title=row['title'], authors=row['authors']) 
              for _, row in df.iterrows()]
     logger.info(f"Loaded {len(books)} books from CSV")
